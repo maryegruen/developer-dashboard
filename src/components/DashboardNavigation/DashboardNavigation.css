@@ -1,0 +1,9 @@
+.DashboardNavigation-container {
+  border-right: 1px solid #e9ecef;
+  height: calc(100vh - 59px);
+}
+.DashboardNavigation-item {
+  border-bottom: 1px solid #e9ecef;
+  height: 45px;
+  padding: 15px;
+}

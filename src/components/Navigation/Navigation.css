@@ -1,0 +1,16 @@
+.Navigation {
+  border-bottom: 1px solid #e9ecef;
+  height: 59px;
+}
+.Navigation-logo {
+  background-image: url(../../img/stytch-logo.png);
+  background-repeat: no-repeat;
+  background-size: 200px 44px;
+  height: 44px;
+  margin: 15px;
+}
+.Navigation-buttonList {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+}
