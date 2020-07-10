@@ -1,6 +1,11 @@
 .Navigation {
+  align-items: center;
   border-bottom: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: row;
   height: 59px;
+  justify-content: space-between;
+  margin: 0 5px;
 }
 .Navigation-logo {
   background-image: url(../../img/stytch-logo.png);
@@ -8,9 +13,13 @@
   background-size: 200px 44px;
   height: 44px;
   margin: 15px;
+  width: 200px;
 }
-.Navigation-buttonList {
-  position: fixed;
-  right: 15px;
-  top: 15px;
+.Navigation-items {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+.Navigation-item:hover {
+  cursor: pointer;
 }
