@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/developer-dashboard/static/css/main.c0990611.chunk.css",
-    "main.js": "/developer-dashboard/static/js/main.31ac58bb.chunk.js",
-    "main.js.map": "/developer-dashboard/static/js/main.31ac58bb.chunk.js.map",
+    "main.css": "/developer-dashboard/static/css/main.4c57d189.chunk.css",
+    "main.js": "/developer-dashboard/static/js/main.9f89e77d.chunk.js",
+    "main.js.map": "/developer-dashboard/static/js/main.9f89e77d.chunk.js.map",
     "runtime-main.js": "/developer-dashboard/static/js/runtime-main.1bffdaf6.js",
     "runtime-main.js.map": "/developer-dashboard/static/js/runtime-main.1bffdaf6.js.map",
     "static/css/2.5b63c9e1.chunk.css": "/developer-dashboard/static/css/2.5b63c9e1.chunk.css",
-    "static/js/2.6a9f9eb5.chunk.js": "/developer-dashboard/static/js/2.6a9f9eb5.chunk.js",
-    "static/js/2.6a9f9eb5.chunk.js.map": "/developer-dashboard/static/js/2.6a9f9eb5.chunk.js.map",
+    "static/js/2.1bfd5eea.chunk.js": "/developer-dashboard/static/js/2.1bfd5eea.chunk.js",
+    "static/js/2.1bfd5eea.chunk.js.map": "/developer-dashboard/static/js/2.1bfd5eea.chunk.js.map",
     "index.html": "/developer-dashboard/index.html",
-    "precache-manifest.0d506cd155e0c1b16498d2364598859c.js": "/developer-dashboard/precache-manifest.0d506cd155e0c1b16498d2364598859c.js",
+    "precache-manifest.985775fbcac19e7fc24707311909bc10.js": "/developer-dashboard/precache-manifest.985775fbcac19e7fc24707311909bc10.js",
     "service-worker.js": "/developer-dashboard/service-worker.js",
     "static/css/2.5b63c9e1.chunk.css.map": "/developer-dashboard/static/css/2.5b63c9e1.chunk.css.map",
-    "static/css/main.c0990611.chunk.css.map": "/developer-dashboard/static/css/main.c0990611.chunk.css.map",
-    "static/js/2.6a9f9eb5.chunk.js.LICENSE.txt": "/developer-dashboard/static/js/2.6a9f9eb5.chunk.js.LICENSE.txt"
+    "static/css/main.4c57d189.chunk.css.map": "/developer-dashboard/static/css/main.4c57d189.chunk.css.map",
+    "static/js/2.1bfd5eea.chunk.js.LICENSE.txt": "/developer-dashboard/static/js/2.1bfd5eea.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1bffdaf6.js",
     "static/css/2.5b63c9e1.chunk.css",
-    "static/js/2.6a9f9eb5.chunk.js",
-    "static/css/main.c0990611.chunk.css",
-    "static/js/main.31ac58bb.chunk.js"
+    "static/js/2.1bfd5eea.chunk.js",
+    "static/css/main.4c57d189.chunk.css",
+    "static/js/main.9f89e77d.chunk.js"
   ]
 }
