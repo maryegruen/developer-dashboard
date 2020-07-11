@@ -1,8 +1,8 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import "./DashboardNavigation.css";
 import Column from "@sendgrid/ui-components/grid/column";
 
-export default class DashboardNavigation extends PureComponent {
+export default class DashboardNavigation extends React.PureComponent {
   render() {
     return (
       <Column width={3}>

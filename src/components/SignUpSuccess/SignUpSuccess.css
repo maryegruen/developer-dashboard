@@ -1,0 +1,12 @@
+.SignUpSuccess {
+  justify-items: center;
+  padding: 20px;
+  text-align: center;
+}
+.sg-icon-status-positive {
+  margin-bottom: 20px;
+  color: #18c96e;
+}
+.SignUpSuccess-description {
+  margin-top: 20px;
+}

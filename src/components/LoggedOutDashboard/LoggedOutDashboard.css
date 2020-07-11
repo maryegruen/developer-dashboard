@@ -1,0 +1,4 @@
+.LoggedOutDashboard {
+  background-color: #f6f7fb;
+  height: calc(100vh - 59px);
+}

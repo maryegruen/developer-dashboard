@@ -1,0 +1,11 @@
+.SignUpProgress {
+  display: flex;
+  justify-content: center;
+}
+.is-done label {
+  cursor: pointer;
+}
+
+.is-done label:hover {
+  text-decoration: underline;
+}

@@ -48,26 +48,36 @@ export default class Navigation extends React.Component {
             <i className="sg-icon" />
           </span>
         </div>
-        {this.props.name ? (
+        {this.props.isLoggedIn ? (
           <div className={this.dropdownClasses()} onClick={this.toggleDropdown}>
             <i className="sg-icon sg-icon-teammate" />
             {this.props.name}
             <ul className="dropdown-menu">
               <li>
-                <a class="dropdown-link">Dashboard</a>
+                <a className="dropdown-link">Dashboard</a>
               </li>
               <li>
-                <a class="dropdown-link">Settings</a>
+                <a className="dropdown-link">Settings</a>
               </li>
               <li>
-                <a class="dropdown-link">Log out</a>
+                <a
+                  className="dropdown-link"
+                  onClick={() => this.props.updateIsLoggedIn(false)}
+                >
+                  Log out
+                </a>
               </li>
             </ul>
           </div>
         ) : (
-          <div className="Navigation-buttonList btn-list">
+          <div className="btn-list">
             <button className="btn btn-secondary">Log in</button>
-            <button className="btn btn-primary">Sign up</button>
+            <button
+              className="btn btn-primary"
+              onClick={this.props.handleOpenSignUpModal}
+            >
+              Sign up
+            </button>
           </div>
         )}
       </div>
