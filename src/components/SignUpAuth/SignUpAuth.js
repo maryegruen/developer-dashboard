@@ -9,7 +9,7 @@ export default class SignUpAuth extends React.PureComponent {
           <label className="input-select-label" htmlFor="project-status">
             What best describes your current authentication solution?
           </label>
-          <div class="input-select">
+          <div className="input-select">
             <select id="project-status">
               <option></option>
               <option value="New">I need to build one.</option>
@@ -27,7 +27,7 @@ export default class SignUpAuth extends React.PureComponent {
           >
             How can users interact with your application?
           </label>
-          <div class="input-select">
+          <div className="input-select">
             <select id="interaction">
               <option></option>
               <option value="Mobile">Mobile application only</option>
@@ -40,7 +40,7 @@ export default class SignUpAuth extends React.PureComponent {
           <label className="input-select-label" htmlFor="data">
             What type of user data does your application contain?
           </label>
-          <div class="input-select">
+          <div className="input-select">
             <select id="data">
               <option></option>
               <option value="Basic">Basic profile data</option>

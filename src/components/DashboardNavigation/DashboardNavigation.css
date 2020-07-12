@@ -1,9 +1,27 @@
-.DashboardNavigation-container {
+.DashboardNavigation {
   border-right: 1px solid #e9ecef;
-  height: calc(100vh - 59px);
+  width: 200px;
+  height: calc(100vh - 60px);
 }
 .DashboardNavigation-item {
   border-bottom: 1px solid #e9ecef;
-  height: 45px;
+  height: 50px;
   padding: 15px;
+}
+.DashboardNavigation-item:hover {
+  cursor: pointer;
+}
+.DashboardNavigation-accordionItem {
+  border-top: none;
+  border-right: none;
+}
+.is-visible .accordion-content {
+  display: block;
+  padding: 0;
+}
+li .DashboardNavigation-item {
+  padding-left: 25px;
+}
+.is-active {
+  color: #489be8;
 }

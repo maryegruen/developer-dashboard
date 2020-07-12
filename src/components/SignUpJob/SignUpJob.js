@@ -76,7 +76,7 @@ export default class SignUpJob extends React.PureComponent {
           <label className="input-select-label" htmlFor="role">
             Role
           </label>
-          <div class="input-select">
+          <div className="input-select">
             <select id="role" placeholder="Select a role">
               <option></option>
               <option value="Developer">Developer</option>

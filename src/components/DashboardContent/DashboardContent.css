@@ -1,0 +1,6 @@
+.DashboardContent {
+  background-color: #f6f7fb;
+  flex: 1;
+  height: calc(100vh - 59px);
+  padding: 20px;
+}

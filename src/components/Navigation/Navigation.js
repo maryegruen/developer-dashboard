@@ -31,19 +31,19 @@ export default class Navigation extends React.Component {
       <div className="Navigation">
         <div className="Navigation-logo" alt="logo" />
         <div className="Navigation-items">
-          <span className="Navigation-item">
+          <span className="Navigation-item small">
             Products
             <i className="sg-icon sg-icon-caret" />
           </span>
-          <span className="Navigation-item">
+          <span className="Navigation-item small">
             Docs
             <i className="sg-icon sg-icon-caret" />
           </span>
-          <span className="Navigation-item">
+          <span className="Navigation-item small">
             About
             <i className="sg-icon" />
           </span>
-          <span className="Navigation-item">
+          <span className="Navigation-item small">
             Careers
             <i className="sg-icon" />
           </span>

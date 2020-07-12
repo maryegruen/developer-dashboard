@@ -1,3 +1,3 @@
-import GlobalNavigation from "./Navigation.js";
+import Navigation from "./Navigation.js";
 
-export default GlobalNavigation;
+export default Navigation;

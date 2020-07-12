@@ -1,18 +1,35 @@
 import React from "react";
-import Row from "@sendgrid/ui-components/grid/row";
+import "./Dashboard.css";
 import DashboardNavigation from "../DashboardNavigation";
 import Navigation from "../Navigation";
 import SignUpModal from "../SignUpModal";
 import LoggedOutDashboard from "../LoggedOutDashboard";
+import DashboardContent from "../DashboardContent";
+
+export const DASHBOARD_NAV_ITEMS = {
+  DASHBOARD: "Dashboard",
+  SINGLE_FACTOR: "SingleFactor",
+  MULTI_FACTOR: "MultiFactor",
+  REPORTS: "Reports",
+  SETTINGS: "Settings",
+};
 
 export default class Dashboard extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.state = { name: "", isLoggedIn: false, isSignUpModalOpen: false };
-    this.handleOpenSignUpModal = this.handleOpenSignUpModal.bind(this);
+    this.state = {
+      activeItem: DASHBOARD_NAV_ITEMS.DASHBOARD,
+      name: "",
+      isLoggedIn: true,
+      isSetUpGroupOpen: false,
+      isSignUpModalOpen: false,
+    };
     this.handleCloseSignUpModal = this.handleCloseSignUpModal.bind(this);
+    this.handleOpenSignUpModal = this.handleOpenSignUpModal.bind(this);
+    this.handleOpenSetUpGroup = this.handleOpenSetUpGroup.bind(this);
     this.updateIsLoggedIn = this.updateIsLoggedIn.bind(this);
     this.updateName = this.updateName.bind(this);
+    this.updateActiveItem = this.updateActiveItem.bind(this);
   }
 
   handleOpenSignUpModal() {
@@ -29,6 +46,12 @@ export default class Dashboard extends React.PureComponent {
     });
   }
 
+  handleOpenSetUpGroup() {
+    this.setState((prevState) => ({
+      isSetUpGroupOpen: !prevState.isSetUpGroupOpen,
+    }));
+  }
+
   updateIsLoggedIn(isLoggedIn) {
     this.setState({
       isLoggedIn,
@@ -38,6 +61,12 @@ export default class Dashboard extends React.PureComponent {
   updateName(name) {
     this.setState({
       name,
+    });
+  }
+
+  updateActiveItem(item) {
+    this.setState({
+      activeItem: item,
     });
   }
 
@@ -51,9 +80,20 @@ export default class Dashboard extends React.PureComponent {
           updateIsLoggedIn={this.updateIsLoggedIn}
         />
         {this.state.isLoggedIn ? (
-          <Row>
-            <DashboardNavigation />
-          </Row>
+          <div className="Dashboard-content">
+            <DashboardNavigation
+              activeItem={this.state.activeItem}
+              isSetUpGroupOpen={this.state.isSetUpGroupOpen}
+              handleOpenSetUpGroup={this.handleOpenSetUpGroup}
+              updateActiveItem={this.updateActiveItem}
+            />
+            <DashboardContent
+              activeItem={this.state.activeItem}
+              handleOpenSetUpGroup={this.handleOpenSetUpGroup}
+              name={this.state.name}
+              updateActiveItem={this.updateActiveItem}
+            />
+          </div>
         ) : (
           <LoggedOutDashboard />
         )}

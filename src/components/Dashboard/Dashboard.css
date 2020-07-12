@@ -1,0 +1,4 @@
+.Dashboard-content {
+  display: flex;
+  flex-direction: row;
+}
