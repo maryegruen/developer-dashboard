@@ -19,8 +19,8 @@ export default class Dashboard extends React.PureComponent {
     super(props);
     this.state = {
       activeItem: DASHBOARD_NAV_ITEMS.DASHBOARD,
-      name: "Mary Gruen",
-      isLoggedIn: true,
+      name: "",
+      isLoggedIn: false,
       isSetUpGroupOpen: false,
       isSignUpModalOpen: false,
     };
