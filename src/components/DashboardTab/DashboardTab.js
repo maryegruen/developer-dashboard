@@ -7,9 +7,37 @@ export default class DashboardTab extends React.PureComponent {
     super(props);
     this.state = {
       shouldShowUpsell: true,
+      clientId: "client-d482cc2e-a93b-11ea-bb37-0242ac130002",
+      clientIdTooltip: "Click to copy to clipboard.",
+      secretKeyTooltip: "Click to copy to clipboard.",
+      secretKey: "abc123456",
     };
+    this.onClickCopyClientId = this.onClickCopyClientId.bind(this);
     this.onClickGetStarted = this.onClickGetStarted.bind(this);
     this.onCloseUpsell = this.onCloseUpsell.bind(this);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onClickCopySecretKey = this.onClickCopySecretKey.bind(this);
+  }
+
+  onClickCopyClientId() {
+    navigator.clipboard.writeText(this.state.clientId);
+    this.setState({
+      clientIdTooltip: "Copied!",
+    });
+  }
+
+  onClickCopySecretKey() {
+    navigator.clipboard.writeText(this.state.secretKey);
+    this.setState({
+      secretKeyTooltip: "Copied!",
+    });
+  }
+
+  onMouseEnter() {
+    this.setState({
+      clientIdTooltip: "Click to copy to clipboard.",
+      secretKeyTooltip: "Click to copy to clipboard.",
+    });
   }
 
   getFirstName() {
@@ -57,6 +85,96 @@ export default class DashboardTab extends React.PureComponent {
             </div>
           </div>
         )}
+        <div className="DashboardTab-card card">
+          <h2>Reports overview</h2>
+          <h4>Request Volume</h4>
+          <div className="DashboardTab-reportGroup">
+            <div className="DashboardTab-report">
+              <div className="DashboardTab-lineGraph"></div>
+              <div className="DashboardTab-reportTitle">One time passcode</div>
+            </div>
+            <div className="DashboardTab-report">
+              <div className="DashboardTab-lineGraph"></div>
+              <div className="DashboardTab-reportTitle">Magic link</div>
+            </div>
+            <div className="DashboardTab-report">
+              <div className="DashboardTab-lineGraph"></div>
+              <div className="DashboardTab-reportTitle">PIN</div>
+            </div>
+          </div>
+          <h4>Percent successful</h4>
+          <div className="DashboardTab-reportGroup">
+            <div className="DashboardTab-report">
+              <div className="DashboardTab-lineGraph"></div>
+              <div className="DashboardTab-reportTitle">One time passcode</div>
+            </div>
+            <div className="DashboardTab-report">
+              <div className="DashboardTab-lineGraph"></div>
+              <div className="DashboardTab-reportTitle">Magic link</div>
+            </div>
+            <div className="DashboardTab-report">
+              <div className="DashboardTab-lineGraph"></div>
+              <div className="DashboardTab-reportTitle">PIN</div>
+            </div>
+          </div>
+        </div>
+        <div className="DashboardTab-card card">
+          <h2>Account details</h2>
+          <div className="input-text-wrap is-focused">
+            <label className="input-text-label" htmlFor="client-id">
+              Client ID
+            </label>
+            <input
+              type="text"
+              disabled
+              id="client-id"
+              value={this.state.clientId}
+            />
+            <div
+              className="input-info-tooltip"
+              onClick={this.onClickCopyClientId}
+              onMouseEnter={this.onMouseEnter}
+            >
+              <span
+                data-tooltip={this.state.clientIdTooltip}
+                data-tooltip-pos="right"
+                data-tooltip-length="medium"
+              >
+                <i
+                  className="sg-icon sg-icon-copy input-info-icon"
+                  id="client-id-copy"
+                ></i>
+              </span>
+            </div>
+          </div>
+          <div className="input-text-wrap is-focused">
+            <label className="input-text-label" htmlFor="secret-key">
+              Secret key
+            </label>
+            <input
+              type="password"
+              disabled
+              id="secret-key"
+              value={this.state.secretKey}
+            />
+            <div
+              className="input-info-tooltip"
+              onClick={this.onClickCopySecretKey}
+              onMouseEnter={this.onMouseEnter}
+            >
+              <span
+                data-tooltip={this.state.secretKeyTooltip}
+                data-tooltip-pos="right"
+                data-tooltip-length="medium"
+              >
+                <i
+                  className="sg-icon sg-icon-copy input-info-icon"
+                  id="secret-key-copy"
+                ></i>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

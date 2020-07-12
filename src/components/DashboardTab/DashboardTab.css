@@ -4,3 +4,29 @@
   right: 20px;
   top: 20px;
 }
+.DashboardTab-card {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 30px;
+}
+.DashboardTab-lineGraph {
+  background-image: url(../../img/line-graph.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+  width: 300px;
+}
+.DashboardTab-reportGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.DashboardTab-reportTitle {
+  margin-top: 5px;
+  text-align: center;
+}
+.input-text-wrap {
+  width: 50%;
+}
