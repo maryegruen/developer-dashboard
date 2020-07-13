@@ -19,6 +19,7 @@
 .DashboardTab-reportGroup {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 20px;
   width: 100%;
@@ -27,6 +28,6 @@
   margin-top: 5px;
   text-align: center;
 }
-.input-text-wrap {
+.DashboardTab-input {
   width: 50%;
 }

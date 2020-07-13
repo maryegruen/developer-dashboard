@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navigation.css";
 import classnames from "classnames";
+import { DASHBOARD_NAV_ITEMS } from "../Dashboard/Dashboard";
 
 export default class Navigation extends React.Component {
   constructor(props) {
@@ -54,10 +55,24 @@ export default class Navigation extends React.Component {
             {this.props.name}
             <ul className="dropdown-menu">
               <li>
-                <a className="dropdown-link">Dashboard</a>
+                <a
+                  className="dropdown-link"
+                  onClick={() =>
+                    this.props.updateActiveItem(DASHBOARD_NAV_ITEMS.DASHBOARD)
+                  }
+                >
+                  Dashboard
+                </a>
               </li>
               <li>
-                <a className="dropdown-link">Settings</a>
+                <a
+                  className="dropdown-link"
+                  onClick={() =>
+                    this.props.updateActiveItem(DASHBOARD_NAV_ITEMS.SETTINGS)
+                  }
+                >
+                  Settings
+                </a>
               </li>
               <li>
                 <a

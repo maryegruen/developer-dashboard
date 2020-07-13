@@ -39,6 +39,11 @@ export default class SignUpJob extends React.PureComponent {
     this.props.updateName(e.target.value);
   }
 
+  onBlurEmail(e) {
+    this.setState({ isEmailFocused: false });
+    this.props.updateEmail(e.target.value);
+  }
+
   render() {
     return (
       <>
@@ -54,7 +59,7 @@ export default class SignUpJob extends React.PureComponent {
         </div>
         <div
           className={this.getEmailClassnames()}
-          onBlur={() => this.setState({ isEmailFocused: false })}
+          onBlur={(e) => this.onBlurEmail(e)}
           onFocus={() => this.setState({ isEmailFocused: true })}
         >
           <label className="input-text-label" htmlFor="email">

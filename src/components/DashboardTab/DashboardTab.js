@@ -120,7 +120,7 @@ export default class DashboardTab extends React.PureComponent {
         </div>
         <div className="DashboardTab-card card">
           <h2>Account details</h2>
-          <div className="input-text-wrap is-focused">
+          <div className="DashboardTab-input input-text-wrap is-focused">
             <label className="input-text-label" htmlFor="client-id">
               Client ID
             </label>
@@ -147,7 +147,7 @@ export default class DashboardTab extends React.PureComponent {
               </span>
             </div>
           </div>
-          <div className="input-text-wrap is-focused">
+          <div className="DashboardTab-input input-text-wrap is-focused">
             <label className="input-text-label" htmlFor="secret-key">
               Secret key
             </label>

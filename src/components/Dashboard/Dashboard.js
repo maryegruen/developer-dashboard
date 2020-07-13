@@ -20,7 +20,8 @@ export default class Dashboard extends React.PureComponent {
     this.state = {
       activeItem: DASHBOARD_NAV_ITEMS.DASHBOARD,
       name: "",
-      isLoggedIn: false,
+      email: "",
+      isLoggedIn: true,
       isSetUpGroupOpen: false,
       isSignUpModalOpen: false,
     };
@@ -30,6 +31,7 @@ export default class Dashboard extends React.PureComponent {
     this.updateIsLoggedIn = this.updateIsLoggedIn.bind(this);
     this.updateName = this.updateName.bind(this);
     this.updateActiveItem = this.updateActiveItem.bind(this);
+    this.updateEmail = this.updateEmail.bind(this);
   }
 
   handleOpenSignUpModal() {
@@ -64,6 +66,12 @@ export default class Dashboard extends React.PureComponent {
     });
   }
 
+  updateEmail(email) {
+    this.setState({
+      email,
+    });
+  }
+
   updateActiveItem(item) {
     this.setState({
       activeItem: item,
@@ -78,6 +86,7 @@ export default class Dashboard extends React.PureComponent {
           name={this.state.name}
           handleOpenSignUpModal={this.handleOpenSignUpModal}
           updateIsLoggedIn={this.updateIsLoggedIn}
+          updateActiveItem={this.updateActiveItem}
         />
         {this.state.isLoggedIn ? (
           <div className="Dashboard-content">
@@ -91,7 +100,10 @@ export default class Dashboard extends React.PureComponent {
               activeItem={this.state.activeItem}
               handleOpenSetUpGroup={this.handleOpenSetUpGroup}
               name={this.state.name}
+              email={this.state.email}
               updateActiveItem={this.updateActiveItem}
+              updateName={this.updateName}
+              updateEmail={this.updateEmail}
             />
           </div>
         ) : (
@@ -102,6 +114,7 @@ export default class Dashboard extends React.PureComponent {
           onClose={this.handleCloseSignUpModal}
           updateIsLoggedIn={this.updateIsLoggedIn}
           updateName={this.updateName}
+          updateEmail={this.updateEmail}
         />
       </div>
     );

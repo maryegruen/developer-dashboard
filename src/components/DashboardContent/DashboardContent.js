@@ -26,7 +26,14 @@ export default class DashboardContent extends React.PureComponent {
       case DASHBOARD_NAV_ITEMS.REPORTS:
         return <Reports />;
       case DASHBOARD_NAV_ITEMS.SETTINGS:
-        return <Settings />;
+        return (
+          <Settings
+            name={this.props.name}
+            email={this.props.email}
+            updateName={this.props.updateName}
+            updateEmail={this.props.updateEmail}
+          />
+        );
     }
   }
   render() {

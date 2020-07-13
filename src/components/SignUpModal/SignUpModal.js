@@ -68,7 +68,12 @@ export default class SignUpModal extends React.PureComponent {
       default:
         return <SignUpLogin />;
       case Stages.JOB:
-        return <SignUpJob updateName={this.props.updateName} />;
+        return (
+          <SignUpJob
+            updateName={this.props.updateName}
+            updateEmail={this.props.updateEmail}
+          />
+        );
       case Stages.AUTH:
         return <SignUpAuth />;
       case Stages.SUCCESS:
