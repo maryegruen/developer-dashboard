@@ -20,11 +20,8 @@ export default class SignUpAuth extends React.PureComponent {
             </select>
           </div>
         </div>
-        <div className="input-select-wrap">
-          <label
-            className="input-select-label is-required"
-            htmlFor="interaction"
-          >
+        <div className="input-select-wrap is-required">
+          <label className="input-select-label" htmlFor="interaction">
             How can users interact with your application?
           </label>
           <div className="input-select">
