@@ -21,7 +21,7 @@ export default class Dashboard extends React.PureComponent {
       activeItem: DASHBOARD_NAV_ITEMS.DASHBOARD,
       name: "",
       email: "",
-      isLoggedIn: true,
+      isLoggedIn: false,
       isSetUpGroupOpen: false,
       isSignUpModalOpen: false,
     };
@@ -107,7 +107,9 @@ export default class Dashboard extends React.PureComponent {
             />
           </div>
         ) : (
-          <LoggedOutDashboard />
+          <LoggedOutDashboard
+            handleOpenSignUpModal={this.handleOpenSignUpModal}
+          />
         )}
         <SignUpModal
           isSignUpModalOpen={this.state.isSignUpModalOpen}
