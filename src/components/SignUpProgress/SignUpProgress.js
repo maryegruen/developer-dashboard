@@ -24,12 +24,12 @@ export default class SignUpProgress extends React.PureComponent {
           </li>
           <li className={this.getStageClassName(Stages.JOB)}>
             <label onClick={() => this.props.setCurrentStage(Stages.JOB)}>
-              Job
+              Personal info
             </label>
           </li>
           <li className={this.getStageClassName(Stages.AUTH)}>
             <label onClick={() => this.props.setCurrentStage(Stages.AUTH)}>
-              Auth
+              Your app
             </label>
           </li>
           <li className={this.getStageClassName(Stages.SUCCESS)}>
