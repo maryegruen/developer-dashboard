@@ -1,7 +1,5 @@
 .LoggedOutDashboard {
   background-color: #f6f7fb;
   height: calc(100vh - 59px);
-}
-.LoggedOutDashboard-upsell {
-  margin: 30px;
+  padding: 30px;
 }

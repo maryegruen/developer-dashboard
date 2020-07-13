@@ -5,7 +5,7 @@ export default class LoggedOutDashboard extends React.PureComponent {
   render() {
     return (
       <div className="LoggedOutDashboard">
-        <div className="LoggedOutDashboard-upsell card is-upsell">
+        <div className="card is-upsell">
           <h3>Create an account for your personalized developer dashboard.</h3>
 
           <div className="btn-list">
