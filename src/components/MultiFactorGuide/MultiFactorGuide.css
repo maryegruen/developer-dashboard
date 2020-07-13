@@ -1,0 +1,13 @@
+.MultiFactorGuide-card {
+  background-color: #fff;
+  border-radius: 2px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.MultiFactorGuide-codeblock {
+  font-family: monospace;
+  margin-bottom: 20px;
+}
