@@ -35,13 +35,23 @@ export default class SignUpJob extends React.PureComponent {
   }
 
   onBlurName(e) {
-    this.setState({ isNameFocused: false });
+    if (e.target.value === "") {
+      this.setState({ isNameFocused: false });
+    }
     this.props.updateName(e.target.value);
   }
 
   onBlurEmail(e) {
-    this.setState({ isEmailFocused: false });
+    if (e.target.value === "") {
+      this.setState({ isEmailFocused: false });
+    }
     this.props.updateEmail(e.target.value);
+  }
+
+  onBlurCompany(e) {
+    if (e.target.value === "") {
+      this.setState({ isCompanyFocused: false });
+    }
   }
 
   render() {

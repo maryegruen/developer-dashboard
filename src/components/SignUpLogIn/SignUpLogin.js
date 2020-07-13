@@ -9,6 +9,7 @@ export default class SignUpLogin extends React.PureComponent {
       isPasswordFocused: false,
       isConfirmPasswordFocused: false,
     };
+    this.onBlurUsername = this.onBlurUsername.bind(this);
   }
 
   getUsernameClassnames() {
@@ -35,12 +36,30 @@ export default class SignUpLogin extends React.PureComponent {
     });
   }
 
+  onBlurUsername(e) {
+    if (e.target.value === "") {
+      this.setState({ isUsernameFocused: false });
+    }
+  }
+
+  onBlurPassword(e) {
+    if (e.target.value === "") {
+      this.setState({ isPasswordFocused: false });
+    }
+  }
+
+  onBlurConfirmPassword(e) {
+    if (e.target.value === "") {
+      this.setState({ isConfirmPasswordFocused: false });
+    }
+  }
+
   render() {
     return (
       <>
         <div
           className={this.getUsernameClassnames()}
-          onBlur={() => this.setState({ isUsernameFocused: false })}
+          onBlur={(e) => this.onBlurUsername(e)}
           onFocus={() => this.setState({ isUsernameFocused: true })}
         >
           <label className="input-text-label" htmlFor="username">
@@ -53,7 +72,7 @@ export default class SignUpLogin extends React.PureComponent {
         </div>
         <div
           className={this.getPasswordClassnames()}
-          onBlur={() => this.setState({ isPasswordFocused: false })}
+          onBlur={(e) => this.onBlurPassword(e)}
           onFocus={() => this.setState({ isPasswordFocused: true })}
         >
           <label className="input-text-label" htmlFor="password">
@@ -66,7 +85,7 @@ export default class SignUpLogin extends React.PureComponent {
         </div>
         <div
           className={this.getConfirmPasswordClassnames()}
-          onBlur={() => this.setState({ isConfirmPasswordFocused: false })}
+          onBlur={(e) => this.onBlurConfirmPassword(e)}
           onFocus={() => this.setState({ isConfirmPasswordFocused: true })}
         >
           <label className="input-text-label" htmlFor="confirm_password">

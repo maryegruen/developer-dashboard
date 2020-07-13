@@ -29,13 +29,29 @@ export default class Settings extends React.PureComponent {
   }
 
   onBlurName(e) {
-    this.setState({ isNameFocused: false });
+    if (e.target.value === "") {
+      this.setState({ isNameFocused: false });
+    }
     this.props.updateName(e.target.value);
   }
 
   onBlurEmail(e) {
-    this.setState({ isEmailFocused: false });
+    if (e.target.value === "") {
+      this.setState({ isEmailFocused: false });
+    }
     this.props.updateEmail(e.target.value);
+  }
+
+  onBlurPassword(e) {
+    if (e.target.value === "") {
+      this.setState({ isPasswordFocused: false });
+    }
+  }
+
+  onBlurConfirmPassword(e) {
+    if (e.target.value === "") {
+      this.setState({ isConfirmPasswordFocused: false });
+    }
   }
 
   render() {
@@ -74,7 +90,7 @@ export default class Settings extends React.PureComponent {
               </div>
               <div
                 className={this.getPasswordClassnames()}
-                onBlur={() => this.setState({ isPasswordFocused: false })}
+                onBlur={(e) => this.onBlurPassword(e)}
                 onFocus={() => this.setState({ isPasswordFocused: true })}
               >
                 <label className="input-text-label" htmlFor="password">
@@ -87,9 +103,7 @@ export default class Settings extends React.PureComponent {
               </div>
               <div
                 className={this.getConfirmPasswordClassnames()}
-                onBlur={() =>
-                  this.setState({ isConfirmPasswordFocused: false })
-                }
+                onBlur={(e) => this.onBlurConfirmPassword(e)}
                 onFocus={() =>
                   this.setState({ isConfirmPasswordFocused: true })
                 }
