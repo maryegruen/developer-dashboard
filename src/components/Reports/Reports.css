@@ -1,0 +1,28 @@
+.Reports-card {
+  background-color: #fff;
+  border-radius: 2px;
+  margin-top: 20px;
+  padding: 30px;
+}
+.Reports-lineGraph {
+  background-image: url(../../img/line-graph.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+  width: 300px;
+}
+.Reports-reportGroup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.Reports-reportTitle {
+  margin-top: 5px;
+  text-align: center;
+}
+.Reports-filter {
+  width: 100px;
+}

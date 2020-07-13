@@ -1,0 +1,16 @@
+.Settings-card {
+  background-color: #fff;
+  border-radius: 2px;
+  margin-top: 20px;
+  padding: 30px;
+  position: relative;
+}
+.Settings-edit {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+.Settings-item {
+  margin-bottom: 20px;
+}
